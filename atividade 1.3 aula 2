@@ -1,0 +1,11 @@
+#include <stdio.h>
+
+int main(){
+    int pn;
+        
+    scanf("%d",&pn);
+        
+    printf("%d\n",pn*4);
+    
+    return 0;
+}
