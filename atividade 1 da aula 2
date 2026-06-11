@@ -1,0 +1,14 @@
+#include <stdio.h>
+
+int main(){
+     int pn,lv,e; 
+
+    scanf("%d",&pn); 
+
+    e = pn*2; 
+    lv = e*2; 
+
+    printf("%d\n",lv); 
+
+    return 0;
+}

@@ -1,2 +1,0 @@
-# snowfoxy
-manda ver
