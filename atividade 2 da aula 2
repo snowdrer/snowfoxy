@@ -1,0 +1,14 @@
+#include <stdio.h>
+
+int main(){
+    int lar,comp,inte,mtd; 
+    
+    scanf("%d\n%d",&lar,&comp); 
+    
+    inte = (lar*comp) + ((lar-1)*(comp-1));   
+    mtd  = (((lar-1)*2) + ((comp-1)*2)); 
+
+    printf("%d\n%d\n",inte,mtd); 
+    
+    return 0;
+}
