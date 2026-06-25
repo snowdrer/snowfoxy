@@ -1,0 +1,11 @@
+#include <stdio.h>
+
+int main(){
+    int Lv,dct; 
+
+    scanf("%d\n%d",&Lv,&dct);
+
+    printf("%d\n",Lv-dct);
+
+    return 0;
+}
