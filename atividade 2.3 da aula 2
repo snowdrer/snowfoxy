@@ -1,0 +1,17 @@
+#include <stdio.h>
+
+int main(){
+    int p,d,cpu,valorN,cpf,qp,valorUZI;
+
+    scanf("%d %d\n%d %d",&p,&d,&cpu,&valorUZI);
+
+    qp = p/d;
+
+    cpf = p*cpu;
+
+    valorN = cpf + (qp * valorUZI);
+
+    printf("%d\n",valorN);
+
+    return 0;
+}
