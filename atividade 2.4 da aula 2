@@ -1,0 +1,18 @@
+#include <stdio.h>
+
+int main(){
+   double pibini,f1,f2,pibfin,aux1,aux2;
+
+   pibini = 100.00;
+   
+   scanf("%lf%lf",&f1,&f2);
+
+   aux1 = pibini * ((f1/100.00)+1); 
+   
+   aux2 = (aux1 * ((f2/100.00) + 1)); 
+   
+   printf("%.6lf\n",aux2-100); //
+
+   return 0;
+}
+
