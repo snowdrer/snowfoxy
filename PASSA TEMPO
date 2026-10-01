@@ -1,0 +1,56 @@
+#include <stdio.h>
+#include <time.h>
+
+int main() {
+
+    int ano, mes, dia;
+    int hora, minuto, segundo;
+
+    printf("===sua vida===\n\n");
+
+    printf("Digite seu ano de nascimento: ");
+    scanf("%d", &ano);
+
+    printf("Digite seu mes de nascimento: ");
+    scanf("%d", &mes);
+
+    printf("Digite seu dia de nascimento: ");
+    scanf("%d", &dia);
+
+    printf("Digite sua hora de nascimento: ");
+    scanf("%d", &hora);
+
+    printf("Digite seus minutos de nascimento: ");
+    scanf("%d", &minuto);
+
+    printf("Digite seus segundos de nascimento: ");
+    scanf("%d", &segundo);
+
+    // Data e hora atual
+    time_t agora = time(NULL);
+    struct tm *dataAtual = localtime(&agora);
+
+    // Calcula aproximadamente o tempo de vida
+    int anos = (dataAtual->tm_year + 1900) - ano;
+
+    // Ajusta caso o aniversário ainda não tenha acontecido
+    if ((dataAtual->tm_mon + 1 < mes) ||
+        ((dataAtual->tm_mon + 1 == mes) && dataAtual->tm_mday < dia)) {
+        anos--;
+    }
+
+    printf("\n=== RESULTADO ===\n");
+    printf("Voce tem aproximadamente %d anos.\n", anos);
+
+    printf("Data atual: %02d/%02d/%d\n",
+           dataAtual->tm_mday,
+           dataAtual->tm_mon + 1,
+           dataAtual->tm_year + 1900);
+
+    printf("Hora atual: %02d:%02d:%02d\n",
+           dataAtual->tm_hour,
+           dataAtual->tm_min,
+           dataAtual->tm_sec);
+
+    return 0;
+}
