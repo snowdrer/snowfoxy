@@ -1,0 +1,31 @@
+
+#include <stdio.h>
+int main() {
+    float aux, sala, salaf, aux2, aux3, somat, aux4;
+    scanf("%f", &sala);
+    if (sala <= 2000.00) {
+        printf("Isento\n");
+        return 0;
+    }
+    salaf = sala - 2000.00;
+    if (salaf <= 1000.00) {
+        aux = salaf * 0.08;
+        printf("R$ %.2f\n", aux);
+        return 0;
+    } else {
+        aux = 1000.00 * 0.08;
+        salaf -= 1000.00;
+    }
+    if (salaf <= 1500.00) {
+        aux2 = salaf * 0.18;
+        printf("R$ %.2f\n", aux + aux2);
+        return 0;
+    } else {
+        aux2 = 1500.00 * 0.18;
+        salaf -= 1500.00;
+    }
+    aux3 = salaf * 0.28;
+    somat = aux + aux2 + aux3;
+    printf("R$ %.2f\n", somat);
+    return 0;
+}
