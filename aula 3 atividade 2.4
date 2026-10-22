@@ -1,0 +1,25 @@
+#include <stdio.h>
+
+int main(){
+    int DG,a,b,f,aux=24,soma;
+    
+    scanf("%d%d%d",&a,&b,&f);
+  
+    soma = (a+b+f);  
+  
+    if(soma >= 0){
+        DG = a+b+f;
+        if(DG <= 24 && DG >= 0){
+            printf("%d\n",DG);
+        } else if(DG > 24){
+            DG = soma-aux;
+            printf("%d\n",DG);
+        }
+    } else if (soma < 0) {
+        DG = soma+aux;
+        printf("%d\n",DG);
+    }
+    
+    
+    return 0;
+}
