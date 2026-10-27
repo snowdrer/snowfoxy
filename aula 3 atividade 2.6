@@ -1,0 +1,17 @@
+#include <stdio.h>
+
+int main(){
+    int a,b,d;
+    
+    scanf("%d%d%d",&a,&b,&d);
+    
+    if(a == d || a == b || b == d){
+        printf("S\n");
+    } else if((a + b == d) || (a + d == b) || (d + b) == a){
+        printf("S\n");
+    } else {
+        printf("N\n");
+    }
+
+    return 0;
+}
